@@ -8,7 +8,7 @@ A collection of plugins which can be added to the Talker Texas Ranger
      ,
      "plugins": [
      "pingpong",
-     "broadcast"
+     *"broadcast"*
      ],
      ...
 
