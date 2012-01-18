@@ -25,7 +25,7 @@ A plugin to allow users to use the '!math' command
 
 Results in : 8
 
-Current operators are *, / , \ , +, - 
+Current operators are *, / , \ , +, -   
 Operators are processed in normal order of precedence.  Also, left-to-right.
 
 Recursion is used.
@@ -43,14 +43,14 @@ Results in : #242424 = rgb(36, 36, 36)
 
 Acceptable formats include:
 
-!color FFFFFF
-!color parse this color please FFFFFF
-!color $FFFFFF!!!! etc etc
-!color 255,255,255
-!color parse this color please 255,255,255
+!color FFFFFF  
+!color parse this color please FFFFFF  
+!color $FFFFFF!!!! etc etc  
+!color 255,255,255  
+!color parse this color please 255,255,255  
 
 Bounds are checked between 0-255 for rgb elements
 Bounds are checked between 0-FF for hex elements
 
-Also, if rgb elements have decimals, they are rounded using parseInt()
+Also, if rgb elements have decimals, they are rounded using parseInt()  
 There is no support currently for the 0-1.0 rgb scale.
