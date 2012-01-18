@@ -18,7 +18,7 @@ talker.command('broadcast', function (data, args) {
 	var userPrefix = "(" + data.user.name + ") : ";
 
 	// Send broadcast
-	talker.broadcast(userPrefix + broadcastMessage, data.room);
+	talker.broadcast(userPrefix + broadcastMessage, [data.room]);
 });
 
 
