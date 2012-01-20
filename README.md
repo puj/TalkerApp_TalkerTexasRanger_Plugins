@@ -54,3 +54,45 @@ Bounds are checked between 0-FF for hex elements
 
 Also, if rgb elements have decimals, they are rounded using parseInt()  
 There is no support currently for the 0-1.0 rgb scale.
+
+## svnmonitor
+A plugin to allow users to use the '!svn' command  
+Also includes a daemon to monitor svn commits in nearly realtime.
+
+### Installation Specifics
+1.  Copy/clone the svnmonitor into your '.../TalkerTexasRanger/plugins/' folder
+2.  Make sure you have npm installed as a module.  From '.../TalkerTexasRanger/' do 'npm install npm'
+3.  You should have a recent version of SVN on your TalkerTexasRanger server, see 
+
+This plugin loads https://github.com/puj/svnmonitor/tree/master/lib/svnmonitor at runtime as a dependency.  This is why npm is required
+
+### Usage
+
+Currently, when a new commit comes in, a broadcast message is sent to all connected rooms.  
+
+	!svn  
+Shows the latest 5 commits in the repository specified in svnmonitor/config.json
+
+	!svn 13
+Shows the latest 13 commits
+
+The !svn command only sends the results back to the room in which the command was issued.
+
+### Confguration
+    {
+        "repository": "http://extjs-public.googlecode.com/svn/trunk",
+        "username": "username",
+        "password": "password",
+        "pollInterval": "2",
+        "messageFormat" : "%r : %a committed -- %m"
+    }
+repository   : link to your repository on an SVN server  
+username     : the username you wish to use for the read operation, no write privileges necessary (optional)  
+password   	 : the password for the username (optional)  
+pollInterval : how often to poll the SVN server for the latest update, in seconds (optional)  
+messageFormat: how the message will look in Talker,  
+  %r - revision number  
+  %a - author  
+  %m - message  
+
+  
