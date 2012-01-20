@@ -2,5 +2,6 @@
     "repository": "http://extjs-public.googlecode.com/svn/trunk",
     "user": "username",
     "password": "password",
-    "pollInterval": "2"
+    "pollInterval": "2",
+    "messageFormat" : "%r : %a committed -- %m"
 }
